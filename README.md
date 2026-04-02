@@ -1,48 +1,38 @@
-🤖 Telegram AI Bot (Mistral + Search + Web Reader)
+#🤖 Mistral AI Telegram Bot
 
-Умный Telegram-бот с поддержкой LLM, поиска в интернете и чтения сайтов.
+Telegram-бот с искусственным интеллектом на базе **Mistral AI**, который умеет:
+- вести диалог с учетом истории сообщений,
+- самостоятельно искать актуальную информацию в интерете (Apify + Google),
+- читать содержимаое сайтов по ссылке,
+- показывать погоду через API Яндекс.Погоды.
 
-🚀 Возможности
-🧠 AI-ассистент
-•	Общение через Mistral AI
-•	Понимание контекста (память диалога)
-•	Ответы на любые вопросы
-🔍 Поиск в интернете
-•	Автоматический поиск через Apify
-•	Используется, если вопрос требует актуальной информации
-🌐 Чтение сайтов
-Просто отправь ссылку
-Бот:
-откроет сайт
-извлечёт текст
-кратко перескажет
-🌦 Погода
-•	Получение текущей погоды через Yandex API
-•	Команда: /weather Москва
-💬 Удобство
-•	Inline кнопки
-•	Авто-режим (сам решает: искать или отвечать)
-🧱 Архитектура
-Telegram → Bot → Логика → API:
-                        ├── Mistral AI (ответы)
-                        ├── Apify (поиск)
-                        ├── Website parser (чтение сайтов)
-                        └── Yandex Weather (погода)
-📦 Установка
-git clone https://github.com/TTaTpuapx/your_repo.git
-cd your_repo
-pip install -r requirements.txt
-🔑 Настройка
+Бот написан на Python с использованием библиотек 'python-telegram-bot', 'requests', 'apift-client', 'yawether'.
 
-Создай файл .env в корне проекта:
+---
+## 🚀Возможности
+'/start' - Приветствие и кнопка с контактом автора
+'/search <запрос>' - Поиск в Google через Apify, вывод заголовков и ссылок
+'/weather <город>' - Текущая погода (Поддерживаются Москва, СПб, Екатеринбург, Новосибирск, Владивосток)
+Любое текстовое сообщение - Бот отвечает через Mistral AI, автоматически подключая поиск при ключевых словах ("новости", "курс", "погода", "цена" или длинный запрос).
+Отправка ссылки - Бот прочитает содержимое страницы и кратко перескажет его.
+Дополнительные "умные" фичи:
+-**Контекстный диалог** - бот помнит последние 6 сообщений в каждом чате.
+-**Автоматический веб-поиск** - если вопрос требует свежей информации, бот сам выполнит поиск и добавит результаты в ответ.
+-**Чистый ответ** - удаляются лишние Markdown-символы (звездочки), ответ приходит в удобном виде.
 
-BOT_TOKEN=your_telegram_token
-MISTRAL_API_KEY=your_mistral_api_key
-APIFY_API_KEY=your_apify_api_key
-YANDEX_WEATHER_API_KEY=your_weather_api_key
-▶️ Запуск (локально)
-python chat.py
-👨‍💻 Автор
+## 🛠Технологии
+- [Python 3.9+] (https://www.python.org/)
+- [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) - взаимодействие с telegram
+- [Mistral AI API](https://docs.mistral.ai/) - языковая модель (через OpenRouter, модель 'mistral-small-latest')
+- [Apify](https://apift.com/) - поиск Google ('apify/google-search-scraper')
+- [YaWeather](hhtps://github.com/azhurb/yaweather) - неофициальная библиотека для Яндекс.Погода
+- 'requests', 're', 'cpllections' - вспомогательные модули
 
+## 📦 Установка и запуск
+
+### 1. Клонируйте репозиторий
+'''bash
+git clone https://github.com/TTaTpuapx/smart_tg_bot.git
+cd /TTaTpuapx
 Кирилл
 👉 https://t.me/s_usser
