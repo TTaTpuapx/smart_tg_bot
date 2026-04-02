@@ -33,6 +33,6 @@ Telegram-бот с искусственным интеллектом на баз
 ### 1. Клонируйте репозиторий
 '''bash
 git clone https://github.com/TTaTpuapx/smart_tg_bot.git
-cd /TTaTpuapx
+cd smart_tg_bot
 Кирилл
 👉 https://t.me/s_usser
