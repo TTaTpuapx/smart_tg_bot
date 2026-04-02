@@ -1,7 +1,7 @@
 # 🤖 Mistral AI Telegram Bot
 
 Telegram‑бот с искусственным интеллектом на базе **Mistral AI**, который умеет:
-Имя бота по имени @botikaipomoshbot
+Имя бота по имени https//t.me/@botikaipomoshbot
 
 - вести диалог с учётом истории сообщений,
 - самостоятельно искать актуальную информацию в интернете (Apify + Google),
